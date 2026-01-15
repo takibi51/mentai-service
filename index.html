@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENTAI | AI面接×スコア×ログで、採用を変える</title>
+    <meta name="description" content="AIが候補者の音声応答を解析し、コミュニケーション・ロジカルシンキング・プレッシャー耐性をスコア化。学歴に頼らず「今、会うべき人」を見極める採用支援サービス。">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MENTAI | AI面接×スコア×ログで、採用を変える">
+    <meta property="og:description" content="AIが候補者の音声応答を解析し、スコア化。学歴に頼らず「今、会うべき人」を見極める。">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/animations.css">
+</head>
+
+<body>
+    <!-- Cursor Glow (Added by JS) -->
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <img src="./assets/images/logo.png" alt="Mentai" style="height: 90px;">
+            </a>
+            <div class="header-cta">
+                <a href="about.html" class="btn btn-secondary sm">企業情報</a>
+                <a href="#contact" class="btn btn-primary sm">資料請求 / お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="grid-2" style="align-items: center;">
+                <div class="hero-content">
+                    <h1 class="hero-tagline">
+                        "話してみないと<br>わからない"を<br>AIが可視化
+                    </h1>
+                    <p class="hero-sub">
+                        AIが候補者の音声応答を解析し、コミュニケーション・ロジカルシンキング・プレッシャー耐性をスコア化。<br>
+                        学歴や経歴に頼らず「今、会うべき人」を事前に見極め、選考の精度とスピードを向上させます。
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">資料請求 / お問い合わせ</a>
+                        <a href="about.html" class="btn btn-secondary">企業情報を見る</a>
+                    </div>
+                    <div class="hero-notes">
+                        <span class="hero-note">10〜30分のAI面接で一次面接相当をアセスメント</span>
+                        <span class="hero-note">スコア＋ログで、企業が直接スカウト</span>
+                    </div>
+                </div>
+                <!-- Hero Mascot -->
+                <div class="hero-mascot float" style="text-align: right; overflow: visible;">
+                    <img src="./assets/images/mascot-hero.png" alt="MENTAI Mascot"
+                        style="max-width: 1710px; width: 150%; margin-left: auto; margin-right: 50px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENTAIとは（価値提案） -->
+    <section class="section section-cream" id="about">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>MENTAIとは</h2>
+                <p>AI面接データで採用の精度とスピードを両立する、新しいスカウトプラットフォーム</p>
+            </div>
+
+            <div class="grid-2">
+                <!-- "中身"でスカウト -->
+                <div class="card feature-card fade-in">
+                    <div class="card-icon">🎯</div>
+                    <h3>"中身"でスカウト</h3>
+                    <p>
+                        AI面接データをもとに、価値観・対話力・カルチャーフィットを把握。<br>
+                        学歴や経歴に頼らず、"今会うべき人"に狙いを定めてアプローチすることができます。
+                    </p>
+                    <ul class="check-list">
+                        <li>"学歴のみ"の検索条件に頼らない、より本質的な出会いを実現</li>
+                        <li>カルチャーフィットにピンポイントでアプローチできる新しいスカウト体験</li>
+                    </ul>
+                </div>
+
+                <!-- 面接の工数削減 -->
+                <div class="card feature-card fade-in fade-in-delay-1">
+                    <div class="card-icon">⚡</div>
+                    <h3>面接の工数削減</h3>
+                    <p>
+                        AIが話し方・思考力・印象をスコア化し、候補者の"人となり"を可視化。<br>
+                        一次面接前に見極められるから、面接の数を減らし、意思決定を加速することができます。
+                    </p>
+                    <ul class="check-list">
+                        <li>工数を減らしながら、面接の質を高め、選考のスピードと精度を両立</li>
+                        <li>「話してみないとわからない」をAI面接で先回りして見抜ける</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 解決できる課題 -->
+    <section class="section" id="problems">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>解決できる課題</h2>
+                <p>採用現場で起きている3つの課題を、AI面接で解決します</p>
+            </div>
+
+            <div class="grid-3">
+                <!-- 課題1 -->
+                <div class="card problem-card fade-in stagger-1">
+                    <span class="problem-number">課題 01</span>
+                    <h3>面接工数の逼迫</h3>
+                    <ul>
+                        <li>書類では判断できない候補者が多く「とりあえず会う」が常態化</li>
+                        <li>母集団が拡大すると、質より量の対応になりやすい</li>
+                    </ul>
+                    <div class="problem-metric">
+                        <p>
+                            1次面接＝平均<strong>80分</strong>（60分＋評価記入20分）<br>
+                            1ヶ月に80件面接があるとすると 約<strong>100時間</strong>の負荷をAI面接に代替可能
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 課題2 -->
+                <div class="card problem-card fade-in stagger-2">
+                    <span class="problem-number">課題 02</span>
+                    <h3>評価のばらつき / 選びきれない</h3>
+                    <ul>
+                        <li>学歴・スキルは合っていても人物面がわからない</li>
+                        <li>学歴・スキルでスクリーニングするとスカウト対象がいない</li>
+                        <li>「良さそうな人」はいるが、選びきれない・比べられない</li>
+                        <li>学歴フィルターに依存しすぎて適切な人材を見逃す</li>
+                    </ul>
+                </div>
+
+                <!-- 課題3 -->
+                <div class="card problem-card fade-in stagger-3">
+                    <span class="problem-number">課題 03</span>
+                    <h3>事前スクリーニングが学歴偏重 / 属人化</h3>
+                    <ul>
+                        <li>評価基準が属人化している</li>
+                        <li>面接官の経験値に依存している</li>
+                        <li>面接評価の定量化が難しい</li>
+                        <li>候補者にとっても「運」に左右されてしまう</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text-center fade-in" style="margin-top: 48px; color: var(--text-muted);">
+                AIが音声応答を分析し、言語能力や論理的思考力を <strong style="color: var(--accent-blue);">10〜30分</strong> で評価。
+            </p>
+        </div>
+    </section>
+
+    <!-- サービスの仕組み -->
+    <section class="section section-cream" id="flow">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>サービスの仕組み</h2>
+                <p>3つのステップで、採用の精度とスピードを向上</p>
+            </div>
+
+            <div class="grid-3">
+                <!-- STEP 01 -->
+                <div class="card step-card fade-in stagger-1">
+                    <div class="step-number">01</div>
+                    <h3>AI面接の受講</h3>
+                    <p>
+                        複数のAI面接を受講し、さまざまな質問に回答。<br>
+                        AIが回答内容を分析します。
+                    </p>
+                    <img src="./assets/images/screen-interview.png" alt="AI面接画面"
+                        style="margin-top: 16px; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+                </div>
+
+                <!-- STEP 02 -->
+                <div class="card step-card fade-in stagger-2">
+                    <div class="step-number">02</div>
+                    <h3>AIによる能力スコアリング</h3>
+                    <p>
+                        AIが音声解析 → 論理構造、説得力、話の展開を分析。<br>
+                        コミュニケーション力、ロジカルシンキング、メンタルタフネス等を定量評価。
+                    </p>
+                    <img src="./assets/images/screen-scoring.png" alt="スコアリング画面"
+                        style="margin-top: 16px; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+                </div>
+
+                <!-- STEP 03 -->
+                <div class="card step-card fade-in stagger-3">
+                    <div class="step-number">03</div>
+                    <h3>評価ログの受け取りとスカウト</h3>
+                    <p>
+                        スコアレポート＋ログを企業に共有 → スカウト・選考へ。<br>
+                        企業はスコアとエピソードを基に検索し、適合度の高い候補者に直接スカウト送信。
+                    </p>
+                    <img src="./assets/images/screen-feedback.png" alt="フィードバック画面"
+                        style="margin-top: 16px; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+                </div>
+            </div>
+
+            <div class="text-center fade-in" style="margin-top: 64px;">
+                <a href="#contact" class="btn btn-accent">資料請求 / お問い合わせ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 管理画面（企業向け） -->
+    <section class="section" id="dashboard">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>管理画面</h2>
+                <p>ユーザー別に面接データが数値化され、様々な切り口で検索とスカウトが可能です</p>
+            </div>
+
+            <div class="grid-2">
+                <!-- Dashboard Preview -->
+                <div class="dashboard-preview fade-in" style="padding: 0; overflow: hidden;">
+                    <div class="dashboard-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <img src="./assets/images/dashboard-mock.png" alt="MENTAI管理画面"
+                        style="width: 100%; margin-top: 40px; border-radius: 0 0 var(--radius-xl) var(--radius-xl);">
+                </div>
+
+                <!-- Features -->
+                <div class="fade-in fade-in-delay-1">
+                    <div class="card" style="margin-bottom: 24px;">
+                        <div class="card-icon">🔍</div>
+                        <h3>候補者検索</h3>
+                        <p class="mb-0">
+                            スコア条件・評価傾向・エピソードキーワードでフィルタリング可能。<br>
+                            スコアベースの採用により、大学名では見つけられなかった優秀層を発掘。
+                        </p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 24px;">
+                        <div class="card-icon">📊</div>
+                        <h3>候補者比較</h3>
+                        <p class="mb-0">
+                            総合スコア／各スコア別や大学別で相対比較が可能。
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">✉️</div>
+                        <h3>スカウト操作</h3>
+                        <p class="mb-0">
+                            スコアと性格傾向タグを参照しながら直感的にスカウト送信。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI面接の仕様 -->
+    <section class="section section-cream" id="spec">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>AI面接の仕様</h2>
+                <p>企業が見極めやすい情報を、候補者の負担を最小限にして収集</p>
+            </div>
+
+            <div class="spec-list fade-in">
+                <div class="spec-item">
+                    <div class="spec-icon">⏱️</div>
+                    <div class="spec-text">
+                        <h4>面接時間</h4>
+                        <p>10分〜30分（回答時間に差があるため）</p>
+                    </div>
+                </div>
+
+                <div class="spec-item">
+                    <div class="spec-icon">🤖</div>
+                    <div class="spec-text">
+                        <h4>面接官アバター</h4>
+                        <p>カスタマイズ可能</p>
+                    </div>
+                </div>
+
+                <div class="spec-item">
+                    <div class="spec-icon">💬</div>
+                    <div class="spec-text">
+                        <h4>深掘り質問</h4>
+                        <p>回答を深掘りする垂直質問は2階層まで</p>
+                    </div>
+                </div>
+
+                <div class="spec-item">
+                    <div class="spec-icon">👔</div>
+                    <div class="spec-text">
+                        <h4>監修</h4>
+                        <p>元DeNA／元Recruitの人事が監修</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 信頼性 -->
+    <section class="section" id="trust">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>信頼性</h2>
+                <p>データと実績に基づいた評価基準</p>
+            </div>
+
+            <div class="trust-grid fade-in">
+                <div class="trust-item">
+                    <div class="trust-icon">📈</div>
+                    <h3>相関検証済み</h3>
+                    <p class="mb-0">実際の内定実績と学生データのスコアに高い相関があることを検証済み</p>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-icon">🎯</div>
+                    <h3>難関企業基準</h3>
+                    <p class="mb-0">ロジカルシンキングを重要視する難関企業の評価を基準に判定</p>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-icon">💡</div>
+                    <h3>フィードバック</h3>
+                    <p class="mb-0">GoodとMoreで明確にフィードバック</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 評価項目 -->
+    <section class="section section-cream" id="evaluation">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>評価項目について</h2>
+                <p>AI面接評価項目は一次面接にて確認される3点に集約して実施</p>
+            </div>
+
+            <div class="eval-grid fade-in">
+                <div class="eval-item">
+                    <div class="eval-icon">🧠</div>
+                    <h3>ロジカルシンキング</h3>
+                    <p class="mb-0">論理的な思考力と構造化能力を評価</p>
+                </div>
+
+                <div class="eval-item">
+                    <div class="eval-icon">💬</div>
+                    <h3>コミュニケーション</h3>
+                    <p class="mb-0">対話力と表現の明確さを評価</p>
+                </div>
+
+                <div class="eval-item">
+                    <div class="eval-icon">💪</div>
+                    <h3>プレッシャー耐性</h3>
+                    <p class="mb-0">困難な状況下での対応力を評価</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせ / 資料請求 -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>資料請求 / お問い合わせ</h2>
+                <p>MENTAIについてのご質問やご相談はこちらからお気軽にどうぞ</p>
+            </div>
+
+            <form class="contact-form fade-in" id="contactForm">
+                <!-- お名前 -->
+                <div class="form-row">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label>姓<span class="required">*</span></label>
+                        <input type="text" name="lastName" id="lastName" required placeholder="山田">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label>名<span class="required">*</span></label>
+                        <input type="text" name="firstName" id="firstName" required placeholder="太郎">
+                    </div>
+                </div>
+
+                <!-- 企業様名 -->
+                <div class="form-group">
+                    <label>企業様名<span class="required">*</span></label>
+                    <input type="text" name="company" id="company" required placeholder="株式会社〇〇">
+                </div>
+
+                <!-- 所属 / 役職 -->
+                <div class="form-group">
+                    <label>所属 / 役職<span class="required">*</span></label>
+                    <input type="text" name="department" id="department" required placeholder="人事部 採用担当">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label>Email<span class="required">*</span></label>
+                    <input type="email" name="email" id="email" required placeholder="example@example.com">
+                </div>
+
+                <!-- 電話番号 -->
+                <div class="form-group">
+                    <label>電話番号</label>
+                    <input type="tel" name="phone" id="phone" placeholder="03-1234-5678">
+                </div>
+
+                <!-- 気になる点 -->
+                <div class="form-group">
+                    <label>気になる点<span class="required">*</span></label>
+                    <select name="interest" id="interest" required>
+                        <option value="">選択してください</option>
+                        <option value="service">サービス内容について</option>
+                        <option value="pricing">料金プランについて</option>
+                        <option value="demo">デモ・トライアルについて</option>
+                        <option value="integration">導入方法について</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+
+                <!-- 問い合わせ内容 -->
+                <div class="form-group">
+                    <label>mentaiサービスで特に知りたい点を教えてください</label>
+                    <textarea name="message" id="message" placeholder="ご質問やご要望などをご記入ください"></textarea>
+                </div>
+
+                <!-- 送信ボタン -->
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-accent">送信する</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-cream" id="faq">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>よくあるご質問</h2>
+            </div>
+
+            <div class="faq-list fade-in">
+                <div class="faq-item">
+                    <div class="faq-question">スコアの根拠は何ですか？</div>
+                    <div class="faq-answer">
+                        実際の内定実績と学生データのスコアに高い相関があることを検証済みです。また、ロジカルシンキングを重要視する難関企業の評価を基準に判定しています。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">導入までの流れを教えてください</div>
+                    <div class="faq-answer">
+                        お問い合わせ後、約2週間で導入可能です。まずは資料請求またはオンラインミーティングにて詳細をご説明いたします。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">費用はどのくらいかかりますか？</div>
+                    <div class="faq-answer">
+                        ご利用規模やプランによって異なります。詳細は資料請求またはお問い合わせにてご確認ください。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">学生の母集団はどのくらいですか？</div>
+                    <div class="faq-answer">
+                        現在も継続的に母集団を拡大しております。最新の数値については資料にてご確認いただけます。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">情報セキュリティは大丈夫ですか？</div>
+                    <div class="faq-answer">
+                        個人情報保護法に準拠し、適切なセキュリティ対策を講じております。詳細は資料にてご確認ください。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo" style="display: flex; justify-content: center;">
+                <img src="./assets/images/logo.png" alt="Mentai" style="height: 120px;">
+            </div>
+            <p class="footer-copyright">© 2026 株式会社mentai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./src/main.js"></script>
+</body>
+
+</html>
