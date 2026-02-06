@@ -173,3 +173,55 @@ if (header) {
         }
     });
 }
+
+/**
+ * Privacy Policy Modal
+ */
+function initPrivacyModal() {
+    const privacyBtn = document.getElementById('privacy-policy-btn');
+    const privacyModal = document.getElementById('privacy-modal');
+    const privacyClose = document.getElementById('privacy-modal-close');
+
+    if (!privacyBtn || !privacyModal) return;
+
+    // Open modal
+    privacyBtn.addEventListener('click', () => {
+        privacyModal.style.display = 'flex';
+        setTimeout(() => {
+            privacyModal.classList.add('active');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    });
+
+    // Close modal - close button
+    if (privacyClose) {
+        privacyClose.addEventListener('click', () => {
+            closePrivacyModal();
+        });
+    }
+
+    // Close modal - outside click
+    privacyModal.addEventListener('click', (e) => {
+        if (e.target === privacyModal) {
+            closePrivacyModal();
+        }
+    });
+
+    // Close modal - ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && privacyModal.classList.contains('active')) {
+            closePrivacyModal();
+        }
+    });
+
+    function closePrivacyModal() {
+        privacyModal.classList.remove('active');
+        setTimeout(() => {
+            privacyModal.style.display = 'none';
+        }, 300);
+        document.body.style.overflow = '';
+    }
+}
+
+// Initialize privacy modal
+document.addEventListener('DOMContentLoaded', initPrivacyModal);
