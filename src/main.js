@@ -7,7 +7,64 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initSmoothScroll();
     initContactForm();
+    initHamburgerMenu();
 });
+
+/**
+ * Hamburger Menu for Mobile
+ */
+function initHamburgerMenu() {
+    const hamburger = document.getElementById('hamburgerBtn');
+    const menu = document.getElementById('headerMenu');
+    if (!hamburger || !menu) return;
+
+    // オーバーレイ要素を動的に作成
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+
+    function openMenu() {
+        hamburger.classList.add('active');
+        menu.classList.add('open');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        hamburger.classList.remove('active');
+        menu.classList.remove('open');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // ハンバーガーボタンのトグル
+    hamburger.addEventListener('click', () => {
+        if (menu.classList.contains('open')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    // オーバーレイクリックで閉じる
+    overlay.addEventListener('click', closeMenu);
+
+    // メニュー内リンクをクリックしたら閉じる
+    menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            // 外部リンクの場合はそのまま遷移させる
+            if (!link.getAttribute('href').startsWith('#')) return;
+            closeMenu();
+        });
+    });
+
+    // ウィンドウリサイズでPC表示に戻った場合にメニューをリセット
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    });
+}
 
 /**
  * Scroll-triggered Fade In Animations

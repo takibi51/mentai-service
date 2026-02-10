@@ -1011,6 +1011,70 @@ p {
 }
 
 /* =====================================================
+   HAMBURGER MENU BUTTON
+   ===================================================== */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    z-index: 1002;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-dark);
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger span:nth-child(1) {
+    margin-bottom: 5px;
+}
+
+.hamburger span:nth-child(3) {
+    margin-top: 5px;
+}
+
+/* ハンバーガー → × アニメーション */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* メニューオーバーレイ */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+}
+
+/* =====================================================
    RESPONSIVE
    ===================================================== */
 
@@ -1022,19 +1086,96 @@ p {
     .hero {
         min-height: auto;
         padding: 100px 0 80px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-tagline {
+        text-align: center;
+    }
+
+    .hero-sub {
+        text-align: center;
     }
 
     .hero-cta {
         flex-direction: column;
+        align-items: center;
     }
 
-    .btn {
+    .hero-cta .btn {
         width: 100%;
         justify-content: center;
     }
 
+    .hero-notes {
+        align-items: center;
+    }
+
+    .hero-mascot {
+        text-align: center !important;
+    }
+
+    .hero-mascot img {
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 400px !important;
+    }
+
+    /* ハンバーガーメニューを表示 */
+    .hamburger {
+        display: flex;
+    }
+
+    /* モバイルドロワーメニュー */
     .header-cta {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 280px;
+        height: 100vh;
+        background: rgba(254, 252, 249, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 100px 28px 40px;
+        gap: 16px;
+        z-index: 1001;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+    }
+
+    .header-cta.open {
+        right: 0;
+    }
+
+    .header-cta .link-individual {
+        font-size: 14px;
+        padding: 12px 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        padding-right: 0;
+        padding-bottom: 16px;
+        text-align: center;
+    }
+
+    .header-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header-cta .btn.sm {
+        padding: 14px 24px;
+        font-size: 15px;
+    }
+
+    .menu-overlay {
+        display: block;
     }
 
     .grid-3 {
@@ -1043,6 +1184,20 @@ p {
 
     .card {
         padding: 28px;
+        height: auto;
+    }
+
+    .grid-2 {
+        gap: 32px;
+    }
+
+    /* ダッシュボードセクションのモバイル最適化 */
+    .dashboard-preview {
+        border-radius: var(--radius-lg);
+    }
+
+    .dashboard-preview img {
+        margin-top: 36px !important;
     }
 
     .final-cta {
