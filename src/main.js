@@ -186,7 +186,7 @@ document.querySelectorAll('.btn').forEach(btn => {
         const ripple = document.createElement('span');
         ripple.style.cssText = `
             position: absolute;
-            background: rgba(79, 70, 229, 0.2);
+            background: rgba(124, 185, 232, 0.15);
             border-radius: 50%;
             width: 100px;
             height: 100px;
@@ -222,10 +222,10 @@ const header = document.querySelector('.header');
 if (header) {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            header.style.background = 'rgba(254, 252, 249, 0.98)';
-            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.08)';
+            header.style.background = 'rgba(240, 248, 255, 0.96)';
+            header.style.boxShadow = '0 2px 10px rgba(124, 185, 232, 0.12)';
         } else {
-            header.style.background = 'rgba(254, 252, 249, 0.9)';
+            header.style.background = 'rgba(240, 248, 255, 0.88)';
             header.style.boxShadow = 'none';
         }
     });
